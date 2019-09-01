@@ -9,11 +9,7 @@ class ProductsController < ApplicationController
 
   def inventory
     product = Product.find(params[:id])
-    if !product.inventory.nil?
-      render plain: product.inventory > 0 ? true : false
-    else
-      render plain: ''
-    end
+    render plain: product.inventory > 0 ? true : false
   end
 
   def description
