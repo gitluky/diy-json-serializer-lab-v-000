@@ -9,7 +9,12 @@ $(function() {
   $(".next-btn").on("click", function(e) {
     e.preventDefault();
     var nextId = parseInt($(".next-btn").attr("data-id")) + 1;
-    $.getJSON("/products/" + nextID + "/data");
+    $.getJSON("/products/" + nextID + "/data", function(data) {
+      $(".product-name").text(data["name"]);
+      $(".product-description").text(data["description"]);
+      $(".product-price").text(data["price"]);
+      $(".product-inventory").text(data["inventory"]);
+    });
   }
 
 });
