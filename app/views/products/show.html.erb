@@ -14,6 +14,7 @@ $(function() {
       $(".product-description").text(data["description"]);
       $(".product-price").text(data["price"]);
       $(".product-inventory").text(data["inventory"]);
+      $(".next-btn").attr("data-id", nextId)
     });
   }
 
