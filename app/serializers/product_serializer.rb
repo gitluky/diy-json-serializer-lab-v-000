@@ -2,7 +2,7 @@ class ProductSerializer
 
   def self.serialize(product)
     # serialized_product = '{ "name":' + "#{product.name}," + '"price":' + "#{product.price.to_s}," + '"inventory":' + "#{product.inventory}," + '"description":' + "#{product.description}" + '}'
-    serialized_product = { name: product.name, price: product.price.to_s, inventory: product.inventory, description: product.description }
+    serialized_product = {id: product.id, name: product.name, price: product.price.to_s, inventory: product.inventory, description: product.description }
     serialized_product.to_json
 
     # serialized_product = '{'
